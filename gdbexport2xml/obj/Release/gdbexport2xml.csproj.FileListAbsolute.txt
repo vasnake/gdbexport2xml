@@ -1,0 +1,6 @@
+c:\t\db.updater\src\gdbexport2xml.sol\gdbexport2xml\bin\Release\gdbexport2xml.exe.config
+c:\t\db.updater\src\gdbexport2xml.sol\gdbexport2xml\bin\Release\gdbexport2xml.exe
+c:\t\db.updater\src\gdbexport2xml.sol\gdbexport2xml\bin\Release\gdbexport2xml.pdb
+c:\t\db.updater\src\gdbexport2xml.sol\gdbexport2xml\obj\Release\ResolveAssemblyReference.cache
+c:\t\db.updater\src\gdbexport2xml.sol\gdbexport2xml\obj\Release\gdbexport2xml.exe
+c:\t\db.updater\src\gdbexport2xml.sol\gdbexport2xml\obj\Release\gdbexport2xml.pdb
