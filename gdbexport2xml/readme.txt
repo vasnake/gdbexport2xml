@@ -19,6 +19,7 @@ gdbexport2xml.exe -c=c:\sde\rngis.rgo.sde -t=RGO.DEPOSITS_A,RGO.GEOCHEM_L -f=rgo
 @rem rngis.rgo.sde -- link to geodatabase created in ArcCatalog
 @rem RGO.DEPOSITS_A,RGO.GEOCHEM_L -- featureclasses that will be exported
 @rem rgo.xml -- output file name
+@rem for help run gdbexport2xml.exe w/o parameters
 
 popd
 popd

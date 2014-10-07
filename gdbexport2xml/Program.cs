@@ -1,4 +1,4 @@
-﻿// GdbExport2Xml is .NET console program for one task:
+// GdbExport2Xml is .NET console program for one task:
 // do the same things as ESRI ArcCatalog do by context menu command
 // "Export - XML Workspace Document", I meant SDE GDB featureclasses.
 //
@@ -27,16 +27,19 @@ using ESRI.ArcGIS.esriSystem;
 using ESRI.ArcGIS.Geodatabase;
 using ESRI.ArcGIS.DataSourcesGDB;
 using ESRI.ArcGIS.GeoDatabaseDistributed;
-//using Mono.Options;
+
 
 namespace gdbexport2xml {
+
     public enum progResultCode : int {
         good = 0,
         bad = 1,
         unknown = 2
     }
 
+
     class Log {
+
         public static int level = 1;
 
         public static void p(string str, int dbgLev, string dst) {
@@ -67,16 +70,18 @@ namespace gdbexport2xml {
 
 
     class expGDB2XML {
-        public IAoInitialize
-            mLicInit = null;
-        public String
-            mSdeConnFileName = "", mTabName = "", mExpFileName = "";
-        public bool
-            mNeedData = false, mNeedMeta = false;
 
-        public
-            expGDB2XML(String sdeConnFileName, String tabName,
-                bool expData, bool getMeta, string fname) {
+        public IAoInitialize mLicInit = null;
+        public String mSdeConnFileName = "", mTabName = "", mExpFileName = "";
+        public bool mNeedData = false, mNeedMeta = false;
+
+        public expGDB2XML(
+            String sdeConnFileName,
+            String tabName,
+            bool expData,
+            bool getMeta,
+            string fname)
+        {
             mSdeConnFileName = sdeConnFileName;
             mTabName = tabName;
             mExpFileName = fname;
@@ -85,13 +90,11 @@ namespace gdbexport2xml {
         } // constructor expGDB2XML
 
 
-        public void
-            initLic() {
+        public void initLic() {
             try {
                 IAoInitialize ini = new AoInitializeClass();
                 mLicInit = ini;
-                esriLicenseProductCode pCode =
-                    esriLicenseProductCode.esriLicenseProductCodeArcEditor;
+                esriLicenseProductCode pCode = esriLicenseProductCode.esriLicenseProductCodeArcEditor;
                 //esriLicenseProductCode.esriLicenseProductCodeArcServer;
                 // work on cli: esriLicenseProductCode.esriLicenseProductCodeArcView;
                 // work on srv: esriLicenseProductCode.esriLicenseProductCodeArcServer;
@@ -168,11 +171,10 @@ namespace gdbexport2xml {
         } // getFCNames
 
 
-        public void
-            doWork() {
+        public void doWork() {
             Log.p("doWork started...");
             String sdeconnfname = mSdeConnFileName; // "c:\\t\\test.sde";
-            String tabnames = mTabName; // "T.TAB1,T.TAB2";            
+            String tabnames = mTabName; // "T.TAB1,T.TAB2";
 
             Log.p("Open the source gdb");
             IWorkspaceFactory wspFact = new SdeWorkspaceFactoryClass();
